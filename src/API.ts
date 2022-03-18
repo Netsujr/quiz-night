@@ -20,7 +20,7 @@ export type QuestionState = Question & { answers: string[] };
 export const fetchData = async (amount: number, difficulty: Difficulty) => {
   const url = `https://opentdb.com/api.php?amount=`;
   const response = await fetch(
-    `${url}${amount}&difficulty=${difficulty}&type=multiple`
+    `${url}${amount}&category=21&difficulty=${difficulty}&type=multiple`
   );
   const data = await response.json();
   console.log(data);
